@@ -25,9 +25,10 @@ public class SignInActivity extends Activity{
         loginB.setOnClickListener(new OnClickListener(){
 
         	public void onClick(View viewParam) {
-        		 QrzarActivity.player.setLoggedIn(true);
-        		 Intent myIntent = new Intent(viewParam.getContext(), MainScreenActivity.class);
-                 startActivity(myIntent);
+        		/* On click switch to MainScreenActivity and set loggedIn to true*/
+        		QrzarActivity.player.setLoggedIn(true);
+        		Intent intent = new Intent(viewParam.getContext(), MainScreenActivity.class);
+                startActivity(intent);
         	}
     	
         });
