@@ -27,6 +27,15 @@
                 <catergory android:name="android.intent.category.LOGIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="androi.intent.action.MAIN" />
+                
+                <catergory android:name="android.intent.category.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

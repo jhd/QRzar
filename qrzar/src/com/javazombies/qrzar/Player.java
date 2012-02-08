@@ -14,6 +14,9 @@ public class Player {
 		return loggedIn;
 	}
 	
+	public void setLoggedIn(boolean option){
+		loggedIn = option;
+	}
 	public int Fauth(){
 		return Fauth;
 	}

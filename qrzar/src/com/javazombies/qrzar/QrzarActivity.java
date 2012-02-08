@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class QrzarActivity extends Activity {
 	
-	public Player player;
+	public static Player player;
 
 	/* Called when the activity is first created. */
 
