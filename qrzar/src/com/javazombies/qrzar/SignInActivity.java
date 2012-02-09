@@ -6,11 +6,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import com.facebook.android.*;
+import com.facebook.android.Facebook.*;
 
 public class SignInActivity extends Activity{
+	/* Android facebook key
+	 * ga0RGNYHvNM5d0SLGQfpQWAPGJ8= 
+	 * */
+
+	Facebook facebook = new Facebook("YOUR_APP_ID"); //Needs ADD_ID from facebook
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        /* Initialise facebook api */
+        
+        facebook.authorize(this, new DialogListener() {
+            @Override
+            public void onComplete(Bundle values) {}
+
+            @Override
+            public void onFacebookError(FacebookError error) {}
+
+            @Override
+            public void onError(DialogError e) {}
+
+            @Override
+            public void onCancel() {}
+        });
+        
     }
 	
 	public void onStart(){
@@ -32,5 +56,12 @@ public class SignInActivity extends Activity{
         	}
     	
         });
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		facebook.authorizeCallback(requestCode, resultCode, data);
 	}
 }
