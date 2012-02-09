@@ -19,4 +19,10 @@ public class MainScreenActivity extends Activity{
 		setContentView(R.layout.main);
 		
 	}
+	
+	public void onResume(){
+		super.onResume();
+		
+		SignInActivity.facebook.extendAccessTokenIfNeeded(this, null);
+	}
 }

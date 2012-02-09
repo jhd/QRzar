@@ -16,17 +16,9 @@ public class QrzarActivity extends Activity {
 		/* Load the player */
 		player = new Player();
 
-		if (player.loggedIn()) {
-			/* Switch to main screen */
-			
-			Intent intent = new Intent(this, MainScreenActivity.class);
-			startActivity(intent);
-			
-		} else {
-			/* Switch to login activity */
+		/* Switch to login activity */
 
-			Intent intent = new Intent(this, SignInActivity.class);
-			startActivity(intent);
-		}
+		Intent intent = new Intent(this, SignInActivity.class);
+		startActivity(intent);
 	}
 }
