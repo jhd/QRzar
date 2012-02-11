@@ -32,7 +32,7 @@ public class SignInActivity extends Activity{
 
 		mPrefs = getPreferences(MODE_PRIVATE);
 		access_token = mPrefs.getString("access_token", null);
-		expires = mPrefs.getLong("access_expires", 0);
+		long expires = mPrefs.getLong("access_expires", 0);
         
     }
 	
