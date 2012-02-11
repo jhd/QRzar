@@ -19,7 +19,7 @@ public class SignInActivity extends Activity{
 	 * */
 
 	/* Initialise facebook api */
-	public static Facebook facebook = new Facebook("YOUR_APP_ID"); //Needs ADD_ID from facebook
+	public static Facebook facebook = new Facebook("YOUR_APP_ID"); //Needs APP_ID from facebook
 
     private SharedPreferences mPrefs;
     private String access_token;
@@ -31,8 +31,8 @@ public class SignInActivity extends Activity{
         /* Set up facebook preferences */
 
 		mPrefs = getPreferences(MODE_PRIVATE);
-		String access_token = mPrefs.getString("access_token", null);
-		long expires = mPrefs.getLong("access_expires", 0);
+		access_token = mPrefs.getString("access_token", null);
+		expires = mPrefs.getLong("access_expires", 0);
         
     }
 	
