@@ -23,6 +23,7 @@ public class MainScreenActivity extends Activity{
 		
 		setContentView(R.layout.main);
 		
+		/* Switch to scanning app */
 		IntentIntegrator integrator = new IntentIntegrator(this);
 		integrator.initiateScan();
 		
