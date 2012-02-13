@@ -19,7 +19,7 @@ public class SignInActivity extends Activity{
 	 * */
 
 	/* Initialise facebook api */
-	public static Facebook facebook = new Facebook("YOUR_APP_ID"); //Needs APP_ID from facebook
+	//public static Facebook facebook = new Facebook("YOUR_APP_ID"); //Needs APP_ID from facebook
 
     private SharedPreferences mPrefs;
     private String access_token;
@@ -30,9 +30,9 @@ public class SignInActivity extends Activity{
         
         /* Set up facebook preferences */
 
-		mPrefs = getPreferences(MODE_PRIVATE);
+		/*mPrefs = getPreferences(MODE_PRIVATE);
 		access_token = mPrefs.getString("access_token", null);
-		long expires = mPrefs.getLong("access_expires", 0);
+		long expires = mPrefs.getLong("access_expires", 0);*/
         
     }
 	
@@ -57,7 +57,7 @@ public class SignInActivity extends Activity{
         
 		/* Connect player to facebook */
 		
-		if (access_token != null) {
+		/*if (access_token != null) {
 			facebook.setAccessToken(access_token);
 		}
 		if (expires != 0) {
@@ -91,7 +91,7 @@ public class SignInActivity extends Activity{
 		
 		else{
 			QrzarActivity.player.setLoggedIn(true);
-		}
+		}*/
 
 	}
 
@@ -99,6 +99,6 @@ public class SignInActivity extends Activity{
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 
-		facebook.authorizeCallback(requestCode, resultCode, data);
+		//facebook.authorizeCallback(requestCode, resultCode, data);
 	}
 }
